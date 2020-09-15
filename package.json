@@ -1,0 +1,31 @@
+{
+  "name": "event-emitter",
+  "version": "0.0.0",
+  "description": "event-emitter",
+  "sideEffects": false,
+  "author": "Yevhenii Hurynets",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "cross-env": "^5.2.0",
+    "eslint": "6.2.0",
+    "eslint-plugin-jest": "^22.15.1",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslib": "^1.10.0",
+    "typescript": "^4.0.2"
+  },
+  "config": {},
+  "scripts": {
+    "validate": "yarn lint && yarn typecheck",
+    "test": "yarn jest",
+    "test:watch": "yarn jest --watch",
+    "typecheck": "yarn tsc ./src/*.ts --noEmit",
+    "lint": "yarn eslint ./src/*.ts",
+    "build:typescript": "tsc ./src/index.ts --emitDeclarationOnly --declaration --outDir ./dist"
+  }
+}
