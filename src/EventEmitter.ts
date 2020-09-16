@@ -9,7 +9,6 @@ export abstract class EventEmitterBase<Events, K = keyof Events|symbol> {
     abstract listeners(event: K): Function[];
     abstract emit(event: K, ...args: any[]): boolean;
     abstract listenerCount(type: K): number;
-    // Added in Node 6...
     abstract prependListener(event: K, listener: (...args: any[]) => void): this;
     abstract prependOnceListener(event: K, listener: (...args: any[]) => void): this;
     abstract eventNames(): (K)[];
